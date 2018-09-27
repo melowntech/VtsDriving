@@ -63,7 +63,6 @@ public class NetworkGui : MonoBehaviour
         }
         else
         {
-            Debug.Log("creating button");
             var but = Instantiate(peerButton, peersList.transform, false);
             but.GetComponentInChildren<Text>().text = data;
             but.GetComponent<Button>().onClick.AddListener(delegate { JoinPeer(adr); });
