@@ -25,7 +25,9 @@ public class NetworkGui : MonoBehaviour
     public Button peerButton;
 
     InputField joinAddress;
+    Button joinButton;
     InputField createName;
+    Button createButton;
     GameObject peersList;
 
     NetworkManager man;
@@ -36,7 +38,9 @@ public class NetworkGui : MonoBehaviour
     void Start()
     {
         joinAddress = GameObject.Find("JoinAddress").GetComponent<InputField>();
+        joinButton = GameObject.Find("JoinButton").GetComponent<Button>();
         createName = GameObject.Find("CreateName").GetComponent<InputField>();
+        createButton = GameObject.Find("CreateButton").GetComponent<Button>();
         peersList = GameObject.Find("PeersList");
         man = FindObjectOfType<NetworkManager>();
         disc = FindObjectOfType<DrivingNetworkDiscovery>();
@@ -71,7 +75,7 @@ public class NetworkGui : MonoBehaviour
         }
     }
 
-    void Update()
+    void UpdateDiscovery()
     {
         List<string> keysToDelete = new List<string>();
         foreach (var p in peers)
@@ -83,6 +87,13 @@ public class NetworkGui : MonoBehaviour
             peers.Remove(k);
         if (keysToDelete.Count > 0)
             RegenerateGui();
+    }
+
+    void Update()
+    {
+        UpdateDiscovery();
+        joinButton.interactable = joinAddress.text.Length > 0;
+        createButton.interactable = createName.text.Length > 0;
     }
 
     public void JoinButton()

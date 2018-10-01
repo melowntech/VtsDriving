@@ -2050,7 +2050,7 @@ MonoBehaviour:
   colliderPrefab: {fileID: 1447127621452838, guid: 18c3e4367be48c047a2cee18704023bf,
     type: 2}
   collidersDistance: 50
-  collidersLod: 20
+  collidersLod: 19
 --- !u!114 &114122720583634580
 MonoBehaviour:
   m_ObjectHideFlags: 1
