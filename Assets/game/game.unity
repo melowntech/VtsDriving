@@ -166,8 +166,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 1000
+  near clip plane: 0.2
+  far clip plane: 5000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -213,9 +213,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   pivotOffset: {x: 0, y: 2, z: 0}
-  minDistance: 3
+  minDistance: 5
   maxDistance: 50
   distance: 15
+  cameraSize: 3
   minPitch: 0
   maxPitch: 90
   pitch: 15
@@ -915,8 +916,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 1000
+  near clip plane: 0.2
+  far clip plane: 5000
   field of view: 60
   orthographic: 0
   orthographic size: 5

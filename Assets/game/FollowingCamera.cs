@@ -8,6 +8,7 @@ public class FollowingCamera : MonoBehaviour
     public float minDistance = 5;
     public float maxDistance = 50;
     public float distance = 15;
+    public float cameraSize = 3;
     public float minPitch = 0;
     public float maxPitch = 90;
     public float pitch = 15;
@@ -28,12 +29,19 @@ public class FollowingCamera : MonoBehaviour
     private Vector3 Position()
     {
         Quaternion rot = Rotation();
-        Vector3 pivot = target.transform.position + transform.rotation * pivotOffset;
+        Vector3 pivot = target.transform.position + target.transform.rotation * pivotOffset;
         RaycastHit hit;
-        if (Physics.Raycast(pivot, rot * new Vector3(0, 0, -1), out hit, distance))
-            dst = Mathf.Max(hit.distance - 0.5f, minDistance);
-        else
-            dst = Mathf.Lerp(dst, distance, 0.1f);
+        dst = Mathf.Lerp(dst, distance, 0.1f);
+        for (int y = -3; y < 4; y++)
+        {
+            for (int x = -3; x < 4; x++)
+            {
+                Vector3 dir = (rot * new Vector3(x * cameraSize, y * cameraSize, -maxDistance)).normalized;
+                Debug.DrawRay(pivot, dir * distance);
+                if (Physics.Raycast(pivot, dir, out hit, distance))
+                    dst = Mathf.Min(hit.distance - 0.5f, dst);
+            }
+        }
         return pivot + rot * new Vector3(0, 0, -dst);
     }
 
@@ -81,5 +89,10 @@ public class FollowingCamera : MonoBehaviour
             yaw = initYaw;
             distance = initDistance;
         }
+    }
+
+    void OnDisable()
+    {
+        Cursor.lockState = CursorLockMode.None;
     }
 }

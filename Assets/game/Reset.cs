@@ -25,13 +25,13 @@ public class Reset : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles[1], 0);
             transform.position += new Vector3(0, 2, 0);
             if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
-                transform.position += transform.rotation * new Vector3(0, 0, -1);
+                transform.position += transform.rotation * new Vector3(0, 0, -2);
             if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
-                transform.position += transform.rotation * new Vector3(0, 0, 1);
+                transform.position += transform.rotation * new Vector3(0, 0, 2);
             if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-                transform.position += transform.rotation * new Vector3(-1, 0, 0);
+                transform.position += transform.rotation * new Vector3(-2, 0, 0);
             if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-                transform.position += transform.rotation * new Vector3(1, 0, 0);
+                transform.position += transform.rotation * new Vector3(2, 0, 0);
         }
         else if (Input.GetKeyDown(KeyCode.Return))
         {
