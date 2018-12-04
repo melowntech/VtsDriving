@@ -22,7 +22,7 @@ public class NetworkPlayerController : NetworkBehaviour
 
             // initialize the map
             GameObject map = FindObjectOfType<VtsMap>().gameObject;
-            map.GetComponent<VtsMap>().map.SetMapConfigPath(config.mapconfigUrl);
+            map.GetComponent<VtsMap>().GetVtsMap().SetMapconfigPath(config.mapconfigUrl);
             {
                 VtsMapMakeLocal l = map.GetComponent<VtsMapMakeLocal>();
                 l.longitude = config.position[0];

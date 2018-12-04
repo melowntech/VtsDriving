@@ -4,8 +4,15 @@
       "name": "Hillerød",
       "mapconfigUrl": "http://altair.mlwn.se/store/stage.melown2015/tilesets/denmark-hilleroed-center/mapConfig.json",
       "position": [ 12.2958149, 55.9303523, 68 ],
-      "sunDirection": [ 52.293, 229.231, -2.814 ],
+      "sunDirection": [ 52.293, -25.74, -2.814 ],
       "collisionlod": 20
+    },
+    {
+      "name": "Intergeo Prague",
+      "mapconfigUrl": "https://cdn.melown.com/mario/store/melown2015/map-config/melown/Melown-Earth-Intergeo-2017/mapConfig.json",
+      "position": [ 14.437693, 50.075536, 295.0 ],
+      "sunDirection": [ 28.3, 45.3, 0.0 ],
+      "collisionlod": 19
     },
     {
       "name": "Velké Meziříčí",

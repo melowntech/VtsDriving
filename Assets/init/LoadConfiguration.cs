@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// these structs emit warnings that some fields are not being used, however they are used in the serialization
+#pragma warning disable
+
 [Serializable]
 public class WorldConfig
 {
@@ -22,6 +25,8 @@ internal class WorldsCollection
 
     public static WorldsCollection current;
 }
+
+#pragma warning restore
 
 public class LoadConfiguration : MonoBehaviour
 {

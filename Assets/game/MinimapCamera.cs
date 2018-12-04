@@ -15,6 +15,7 @@ public class MinimapCamera : MonoBehaviour
     {
         transform.rotation = Rotation();
         transform.position = target.transform.position + new Vector3(0, targetOffset, 0);
+        GetComponent<Camera>().cullingMask = 0;
     }
 
     void FixedUpdate()

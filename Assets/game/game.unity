@@ -167,7 +167,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.2
-  far clip plane: 5000
+  far clip plane: 2000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -336,7 +336,8 @@ MonoBehaviour:
   ConfigUrl: https://cdn.melown.com/mario/store/melown2015/map-config/melown/Melown-Earth-Intergeo-2017/mapConfig.json
   AuthUrl: 
   CreateConfig: 
-  RunConfig: '{ "targetResourcesMemoryKB":500000, "traverseModeSurfaces":3 }'
+  RunConfig: '{ "targetResourcesMemoryKB":500000 }'
+  Statistics: This will show statistics at play
 --- !u!4 &804283271
 Transform:
   m_ObjectHideFlags: 0
@@ -787,11 +788,13 @@ MonoBehaviour:
   mapObject: {fileID: 804283268}
   controlTransformation: 0
   controlNearFar: 0
-  controlFov: 0
+  Config: '{ "traverseModeSurfaces":3, "maxTexelToPixelScale":1.2 }'
+  Statistics: This will show statistics at play
   atmosphere: 0
   backgroundMaterial: {fileID: 2100000, guid: 3e83f2df2a270e94ca3c325a39ebd735, type: 2}
   backgroundMesh: {fileID: 4300000, guid: b0f11f207ae451f49bddfbaf9690e9cb, type: 3}
-  renderMaterial: {fileID: 2100000, guid: d959ee906a1141742a0a0e846fe01868, type: 2}
+  opaqueMaterial: {fileID: 2100000, guid: 1191b95305cbb4d45803dd0fe3169f05, type: 2}
+  transparentMaterial: {fileID: 2100000, guid: 725bf94c4ee622347a002a9ca9af9c6f, type: 2}
 --- !u!20 &1318172786
 Camera:
   m_ObjectHideFlags: 0
@@ -812,8 +815,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 50
-  far clip plane: 250
+  near clip plane: 10
+  far clip plane: 500
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -889,11 +892,14 @@ MonoBehaviour:
   mapObject: {fileID: 804283268}
   controlTransformation: 0
   controlNearFar: 0
-  controlFov: 0
+  Config: '{ "traverseModeSurfaces":3, "maxTexelToPixelScale":1.2 }'
+  Statistics: This will show statistics at play
   atmosphere: 0
   backgroundMaterial: {fileID: 2100000, guid: 3e83f2df2a270e94ca3c325a39ebd735, type: 2}
   backgroundMesh: {fileID: 4300000, guid: b0f11f207ae451f49bddfbaf9690e9cb, type: 3}
-  renderPrefab: {fileID: 1447127621452838, guid: c2786d25fdaa64244a6493074f9f5a26,
+  opaquePrefab: {fileID: 1447127621452838, guid: c2786d25fdaa64244a6493074f9f5a26,
+    type: 2}
+  transparentPrefab: {fileID: 1447127621452838, guid: 8299e1985c9568548bc0f508de21c83b,
     type: 2}
   renderLayer: 31
 --- !u!20 &1733228773
@@ -917,7 +923,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.2
-  far clip plane: 5000
+  far clip plane: 2000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -952,7 +958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1869353250
 RectTransform:
   m_ObjectHideFlags: 0
