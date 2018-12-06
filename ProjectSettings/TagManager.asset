@@ -15,6 +15,7 @@ TagManager:
   - 
   - PostProcessing
   - 
+  - Minimap
   - 
   - 
   - 
@@ -35,8 +36,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - VTS-default
   m_SortingLayers:
   - name: Default
     uniqueID: 0

@@ -13,7 +13,7 @@ public class NetworkPlayerController : NetworkBehaviour
     {
         if (isServer)
         {
-            color = Color.HSVToRGB(Random.value, 1, 1);
+            color = Color.HSVToRGB(Random.value, Random.value * 0.5f + 0.5f, Random.value * 0.5f + 0.5f);
         }
 
         if (isLocalPlayer)
@@ -54,10 +54,11 @@ public class NetworkPlayerController : NetworkBehaviour
         foreach (var mr in mrs)
         {
             Material m = mr.material;
-            if (m.name != "SkyCarBodyGrey (Instance)")
-                continue;
-            m.color = color;
-            mr.material = m;
+            if (m.name == "SkyCarBodyGrey (Instance)" || m.name == "MinimapIndicator (Instance)")
+            {
+                m.color = color;
+                mr.material = m;
+            }
         }
     }
 
