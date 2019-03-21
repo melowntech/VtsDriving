@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 92161326}
   - component: {fileID: 92161325}
   - component: {fileID: 92161329}
+  - component: {fileID: 92161330}
   m_Layer: 0
   m_Name: mainCamera
   m_TagString: MainCamera
@@ -264,8 +265,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1733228771}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -291,6 +291,31 @@ MonoBehaviour:
   pitch: 15
   yaw: 0
   cameraMouseSensitivity: 8
+--- !u!114 &92161330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 92161324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 542d2e4901cd4a6428ae2c012ee1200e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapObject: {fileID: 804283268}
+  controlTransformation: 0
+  controlNearFar: 0
+  Config: '{ "traverseModeSurfaces":3, "maxTexelToPixelScale":1.2, "lodBlending":2,
+    "cullingOffsetDistance":100 }'
+  Statistics: This will show statistics at play
+  atmosphere: 0
+  backgroundMaterial: {fileID: 2100000, guid: 3e83f2df2a270e94ca3c325a39ebd735, type: 2}
+  backgroundMesh: {fileID: 4300000, guid: b0f11f207ae451f49bddfbaf9690e9cb, type: 3}
+  opaquePrefab: {fileID: 1447127621452838, guid: c2786d25fdaa64244a6493074f9f5a26,
+    type: 2}
+  transparentPrefab: {fileID: 1447127621452838, guid: 8299e1985c9568548bc0f508de21c83b,
+    type: 2}
+  renderLayer: 31
 --- !u!1 &466375799
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,9 +412,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3aa6ece2ffcce4a9b1d78425a5dce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  longitude: 0
-  latitude: 0
-  altitude: 0
+  x: 0
+  y: 0
+  z: 0
   singleUse: 1
 --- !u!114 &804283270
 MonoBehaviour:
@@ -915,100 +940,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   targetOffset: 150
---- !u!1 &1733228770
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1733228771}
-  - component: {fileID: 1733228773}
-  - component: {fileID: 1733228772}
-  m_Layer: 0
-  m_Name: vtsCamera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1733228771
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733228770}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -30}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 92161328}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1733228772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733228770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 542d2e4901cd4a6428ae2c012ee1200e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mapObject: {fileID: 804283268}
-  controlTransformation: 0
-  controlNearFar: 0
-  Config: '{ "traverseModeSurfaces":3, "maxTexelToPixelScale":1.2 }'
-  Statistics: This will show statistics at play
-  atmosphere: 0
-  backgroundMaterial: {fileID: 2100000, guid: 3e83f2df2a270e94ca3c325a39ebd735, type: 2}
-  backgroundMesh: {fileID: 4300000, guid: b0f11f207ae451f49bddfbaf9690e9cb, type: 3}
-  opaquePrefab: {fileID: 1447127621452838, guid: c2786d25fdaa64244a6493074f9f5a26,
-    type: 2}
-  transparentPrefab: {fileID: 1447127621452838, guid: 8299e1985c9568548bc0f508de21c83b,
-    type: 2}
-  renderLayer: 31
---- !u!20 &1733228773
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733228770}
-  m_Enabled: 0
-  serializedVersion: 2
-  m_ClearFlags: 3
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.2
-  far clip plane: 2000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 0
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!1 &1869353249
 GameObject:
   m_ObjectHideFlags: 0

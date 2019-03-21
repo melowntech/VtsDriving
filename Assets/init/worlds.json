@@ -1,10 +1,17 @@
 {
   "worlds": [
     {
+      "name": "Benátky",
+      "mapconfigUrl": "https://cdn.melown.com/vts/melown2015/unity/world/mapConfig.json",
+      "position": [ 14.825274, 50.291587, 290 ],
+      "sunDirection": [ 31, 88.7, 0 ],
+      "collisionlod": 20
+    },
+    {
       "name": "Hillerød",
       "mapconfigUrl": "http://altair.mlwn.se/store/stage.melown2015/tilesets/denmark-hilleroed-center/mapConfig.json",
       "position": [ 12.2958149, 55.9303523, 68 ],
-      "sunDirection": [ 52.293, -25.74, -2.814 ],
+      "sunDirection": [ 52.293, -25.74, 0 ],
       "collisionlod": 20
     },
     {
@@ -18,7 +25,7 @@
       "name": "Velké Meziříčí",
       "mapconfigUrl": "http://pomerol:8888/buffer/tilesets/vts/melown2015/cities-metav4/velke-mezirici-final/mapConfig.json",
       "position": [ 16.014569, 49.360819, 550 ],
-      "sunDirection": [ 52.293, 229.231, -2.814 ],
+      "sunDirection": [ 52.293, 229.231, 0 ],
       "collisionlod": 19
     }
   ]

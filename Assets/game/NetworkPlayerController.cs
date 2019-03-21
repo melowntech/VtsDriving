@@ -25,9 +25,9 @@ public class NetworkPlayerController : NetworkBehaviour
             map.GetComponent<VtsMap>().GetVtsMap().SetMapconfigPath(config.mapconfigUrl);
             {
                 VtsMapMakeLocal l = map.GetComponent<VtsMapMakeLocal>();
-                l.longitude = config.position[0];
-                l.latitude = config.position[1];
-                l.altitude = config.position[2];
+                l.x = config.position[0];
+                l.y = config.position[1];
+                l.z = config.position[2];
             }
 
             // initialize the car

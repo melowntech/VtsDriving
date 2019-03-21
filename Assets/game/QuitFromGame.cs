@@ -13,6 +13,10 @@ public class QuitFromGame : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-            Application.Quit();
+        {
+            Destroy(NetworkManager.singleton.gameObject);
+            NetworkManager.Shutdown();
+            SceneManager.LoadScene(0); // go back to menu
+        }
     }
 }
