@@ -1,4 +1,4 @@
-Unity example game where the player drives a car in landspace provided by Melown Technologies's VTS plugin.
+Unity example game where the player drives a car in landscape provided by Melown Technologies's VTS plugin.
 
 # Preview
 

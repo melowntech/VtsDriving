@@ -4,10 +4,10 @@ public class Reset : MonoBehaviour
 {
     public float unstuckSpeed = 0.1f;
 
-    Vector3 initPos;
-    Quaternion initRot;
+    private Vector3 initPos;
+    private Quaternion initRot;
 
-    void Start ()
+    void Start()
     {
         initPos = transform.position;
         initRot = transform.rotation;
@@ -19,7 +19,7 @@ public class Reset : MonoBehaviour
         GetComponent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
     }
 
-    void Update ()
+    void Update()
     {
         if (Input.GetAxis("Unstuck") > 0)
         {
