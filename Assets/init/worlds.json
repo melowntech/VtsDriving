@@ -27,6 +27,13 @@
       "position": [ 16.014569, 49.360819, 550 ],
       "sunDirection": [ 52.293, 229.231, 0 ],
       "collisionlod": 19
+    },
+    {
+      "name": "Eindhoven",
+      "mapconfigUrl": "http://pomerol:8888/buffer/tilesets/vts/melown2015/cyclomedia.Eindhoven/mapConfig.json",
+      "position": [ 5.474961, 51.438408, 72 ],
+      "sunDirection": [ 55.4, -40.7, 0 ],
+      "collisionlod": 20
     }
   ]
 }
